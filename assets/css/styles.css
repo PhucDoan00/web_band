@@ -18,6 +18,7 @@ html {
 
 #nav li {
   display: inline-block;
+  position: relative;
 }
 
 #nav li a {
@@ -35,10 +36,20 @@ html {
 }
 
 #nav .subnav {
-  display: none;
+  /* display: none; */
+  position: absolute;
+  background-color: #fff;
+  width: 166px;
+}
+
+#nav .subnav a {
+  color: #333;
+  width: 166px;
 }
 
 #slider {
+  min-height: 500px;
+  background-color: #444;
 }
 
 #content {
