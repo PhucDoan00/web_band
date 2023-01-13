@@ -8,6 +8,14 @@ html {
   font-family: "Lato", sans-serif;
 }
 
+.clear {
+  clear: both;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
 #main {
 }
 
@@ -129,10 +137,154 @@ html {
   margin: 15 0;
 }
 
-#content {
-  height: 1000px;
-  /* background-color: #444; */
+#content .content-section {
+  width: 800px;
+  padding: 64px 16px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  /* right: 0; */
 }
 
-#footer {
+#content .section-heading {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+#content .section-sub-heading {
+  font-style: italic;
+  font-size: 15px;
+  margin-top: 25px;
+  text-align: center;
+  opacity: 0.6;
+}
+
+#content .content-section .about-text {
+  margin-top: 25px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+#content .introduce-member {
+  padding: 48px 0;
+  /* Khi dùng float: left (line 182)
+sẽ xảy ra vấn đề là thẻ div sẽ bị co nhỏ lại và
+ko bao trùm hết nội dung bên trong
+=> Cách 1 dùng Clear:both : thêm 1 div trống có class là clear => css (line 11)
+=> dùng overflow:hidden để khắc phục (cách 2)
+   */
+  /* overflow: hidden; */
+}
+
+#content .member {
+  float: left;
+  width: calc(100% / 3);
+  text-align: center;
+}
+#content .mem-name {
+  font-size: 15px;
+  margin: 15px 0;
+}
+
+#content .mem-img {
+  border-radius: 4px;
+  width: 152px;
+}
+
+/* Tour section */
+
+.tour-section {
+  background-color: #000;
+}
+
+.ticket-list {
+  margin-top: 40px;
+  background-color: #fff;
+  list-style-type: none;
+}
+
+.ticket-list li {
+  padding: 11px 16px;
+  font-size: 15px;
+  border-bottom: 1px solid #ddd;
+  color: #757575;
+}
+
+.ticket-list .sold-out {
+  background-color: #f44336;
+  padding: 8px 8px;
+  margin-left: 16px;
+}
+
+.ticket-list .quantity {
+  float: right;
+  background-color: #000;
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  /* đây đang css cho thẻ span là 1 inline nên ko dùng
+  đc margin right hoặc top => dùng float thì sẽ tự hiểu bỏ
+  từ inline chuyển thành block */
+  margin-right: 16px;
+  margin-top: -2px;
+  border-radius: 50%;
+}
+
+.location {
+  padding: 32px 8px;
+  margin: 0 -16px;
+  /* tương tự trường hợp (line 182) khi dùng float: left(245)
+  thẻ div sẽ bị co nhỏ lại => content bên dưới bị tràng ra ngoài
+  cách khắc phục: dùng overflow:hidden hoặc clear:both */
+  overflow: hidden;
+}
+
+.location-detail {
+  float: left;
+  width: calc(100% / 3);
+  text-align: left;
+  padding: 0 8px;
+}
+
+.location-text {
+  color: #000;
+  background-color: #fff;
+  padding: 0px 16px;
+  min-width: 246px;
+}
+
+.location-text > p {
+  padding: 16px 0;
+}
+
+.buy-ticket {
+  padding: 10px 16px;
+  margin-bottom: 16px;
+  font-size: 15px;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  font-weight: 400;
+  vertical-align: middle;
+  text-align: center;
+  white-space: nowrap;
+}
+.buy-ticket:hover {
+  color: #000;
+  background-color: #ccc;
+}
+
+.location-img {
+  width: 246px;
+}
+
+.location-date {
+  opacity: 0.6;
+}
+
+.image {
 }
