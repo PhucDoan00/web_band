@@ -282,6 +282,10 @@ ko bao trùm hết nội dung bên trong
   width: 246px;
 }
 
+.location-img:hover {
+  opacity: 0.6;
+}
+
 .location-date {
   opacity: 0.6;
 }
