@@ -67,15 +67,15 @@
           ea commodo consequat.
         </p>
         <div class="introduce-member">
-          <div class="member">
+          <div class="col col-third text-center">
             <p class="mem-name">Name</p>
             <img src="/assets/img/members/mem1.jpg" alt="Name" class="mem-img" />
           </div>
-          <div class="member">
+          <div class="col col-third text-center">
             <p class="mem-name">Name</p>
             <img src="/assets/img/members/mem1.jpg" alt="Name" class="mem-img" />
           </div>
-          <div class="member">
+          <div class="col col-third text-center">
             <p class="mem-name">Name</p>
             <img src="/assets/img/members/mem1.jpg" alt="Name" class="mem-img" />
           </div>
@@ -133,19 +133,19 @@
 
       <!-- Begin Contact -->
 
-      <div class="content-section">
+      <!-- <div class="content-section">
         <h2 class="section-heading">CONTACT</h2>
         <p class="section-sub-heading">Fan? Drop a note!</p>
         <div class="contact-info">
-          <div class="contact-address">
+          <div class="contact-address col-half">
             <i class="fa-solid fa-location-dot"></i>
-            <p>Chicago, US</p>
+            Chicago, US
             <i class="fa-solid fa-phone"></i>
-            <p>Phone: +00 151515</p>
+            Phone: +00 151515
             <i class="fa-solid fa-envelope"></i>
-            <p>mail@gmail.com</p>
+            Email: mail@gmail.com
           </div>
-          <div class="contact-form">
+          <div class="contact-form col-half">
             <div class="half-one">
               <input type="text" class="input-name" placeholder="Name">
             </div>
@@ -153,72 +153,114 @@
               <input type="text" class="input-email" placeholder="Email">
             </div>
             <input type="text" class="input-message" placeholder="Message">
+            <button class="">SEND</button>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <!-- MODAL for buying ticker -->
-  <div class="modal js-modal">
-    <div class="modal-container">
+      <div class="content-section">
+        <h2 class="section-heading">CONTACT</h2>
+        <p class="section-sub-heading">Fan? Drop a note!</p>
 
-      <div class="modal-close js-modal-close">
-        <i class="fa-solid fa-xmark"></i>
+        <div class="row contact-content">
+          <div class="col col-half contact-info">
+            <p>
+              <i class="fa-solid fa-location-dot"></i>
+              Chicago, US
+            </p>
+            <p>
+              <i class="fa-solid fa-phone"></i>
+              Phone: +00 151515
+            </p>
+            <p>
+              <i class="fa-solid fa-envelope"></i>
+              Email: mail@gmail.com
+            </p>
+          </div>
+          <div class="col col-half contact-form">
+            <form action="">
+              <div class="row">
+                <div class="col col-half">
+                  <input type="text" name="" id="" required class="form-control" placeholder="Name">
+                </div>
+                <div class="col col-half">
+                  <input type="email" name="" id="" required class="form-control" placeholder="Email">
+                </div>
+              </div>
+              <div class="row mt-8">
+                <div class="col col-full">
+                  <input type="text" name="" id="" required class="form-control" placeholder="Message">
+                </div>
+              </div>
+              <input class="form-submit mt-16" type="submit" value="SEND">
+            </form>
+          </div>
+        </div>
       </div>
 
-      <header class="modal-header">
-        <i class="modal-heading-icon fa-solid fa-suitcase"></i>
-        Tickets
-      </header>
+      <!-- MODAL for buying ticker -->
+      <div class="modal js-modal">
+        <div class="modal-container">
 
-      <div class="modal-body">
+          <div class="modal-close js-modal-close">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
 
-        <label for="quantity" class="modal-label">
-          <i class="fa-solid fa-cart-shopping"></i>
-          Tickets, $15 per person
-        </label>
-        <input id="quantity" type="text" class="modal-input" placeholder="How many?">
+          <header class="modal-header">
+            <i class="modal-heading-icon fa-solid fa-suitcase"></i>
+            Tickets
+          </header>
 
-        <label for="email" class="modal-label">
-          <i class="fa-solid fa-user"></i>
-          Send to
-        </label>
-        <input id="email" type="email" class="modal-input" placeholder="Enter email">
+          <div class="modal-body">
 
-        <button id="buy-ticket">
-          Pay <i class="fa-solid fa-check"></i>
-        </button>
+            <label for="quantity" class="modal-label">
+              <i class="fa-solid fa-cart-shopping"></i>
+              Tickets, $15 per person
+            </label>
+            <input id="quantity" type="text" class="modal-input" placeholder="How many?">
 
+            <label for="email" class="modal-label">
+              <i class="fa-solid fa-user"></i>
+              Send to
+            </label>
+            <input id="email" type="email" class="modal-input" placeholder="Enter email">
+
+            <button id="buy-ticket">
+              Pay <i class="fa-solid fa-check"></i>
+            </button>
+
+          </div>
+
+          <footer class="modal-footer">
+            <p class="modal-help">Need <a href="#">help?</a></p>
+          </footer>
+
+        </div>
       </div>
 
-      <footer class="modal-footer">
-        <p class="modal-help">Need <a href="#">help?</a></p>
-      </footer>
+      <script>
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        const modal = document.querySelector('.js-modal')
+        const modalClose = document.querySelector('.js-modal-close')
 
-    </div>
-  </div>
+        function showBuyTickets() {
+          modal.classList.add('open')
+        }
 
-  <script>
-    const buyBtns = document.querySelectorAll('.js-buy-ticket')
-    const modal = document.querySelector('.js-modal')
-    const modalClose = document.querySelector('.js-modal-close')
+        function closeBuyTickets() {
+          modal.classList.remove('open')
+        }
 
-    function showBuyTickets() {
-      modal.classList.add('open')
-    }
 
-    function closeBuyTickets() {
-      modal.classList.remove('open')
-    }
+        for (const buyBtn of buyBtns) {
+          buyBtn.addEventListener('click', showBuyTickets)
+        }
 
-    for (const buyBtn of buyBtns) {
-      buyBtn.addEventListener('click', showBuyTickets)
-    }
+        modalClose.addEventListener('click', closeBuyTickets)
 
-    modalClose.addEventListener('click', closeBuyTickets)
-
-  </script>
+      </script>
 </body>
 
 </html>
