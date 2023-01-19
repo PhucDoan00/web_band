@@ -16,7 +16,42 @@ html {
   color: #fff !important;
 }
 
-#main {
+/*Common row & col */
+.row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.col {
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.col-half {
+  width: 50%;
+}
+
+.col-third {
+  width: calc(100% / 3);
+}
+
+.col-full {
+  width: 100%;
+}
+
+/* Common Text center  */
+.text-center {
+  text-align: center;
+}
+
+/* Common margin */
+.mt-8 {
+  margin-top: 8px;
+}
+
+.mt-16 {
+  margin-top: 16px;
 }
 
 #header {
@@ -178,11 +213,12 @@ ko bao trùm hết nội dung bên trong
   /* overflow: hidden; */
 }
 
-#content .member {
+/* #content .member {
   float: left;
   width: calc(100% / 3);
   text-align: center;
-}
+} */
+
 #content .mem-name {
   font-size: 15px;
   margin: 15px 0;
@@ -237,6 +273,9 @@ ko bao trùm hết nội dung bên trong
 .location {
   padding: 32px 8px;
   margin: 0 -16px;
+  /* thay thế bằng common row */
+  /* margin-top: 32px;
+  margin-bottom: 48px; */
   /* tương tự trường hợp (line 182) khi dùng float: left(245)
   thẻ div sẽ bị co nhỏ lại => content bên dưới bị tràng ra ngoài
   cách khắc phục: dùng overflow:hidden hoặc clear:both */
@@ -421,16 +460,48 @@ ko bao trùm hết nội dung bên trong
     transform: translateY(-140px);
   }
 }
-.contact-info {
-}
-.contact-address {
-}
-.contact-form {
-}
-.half-one {
-}
-.half-two {
+.contact-content {
+  margin-top: 48px;
 }
 
-.image {
+.contact-info {
+  font-size: 18px;
+  line-height: 1.5;
+}
+/* CSS selector nâng cao: chọn các thẻ
+i trong contact-info mà có class chứa fa- */
+.contact-info i[class*="fa-"] {
+  /* display: inline-block; */
+  width: 30px;
+}
+
+.contact-form {
+  font-size: 15px;
+}
+
+.contact-form .form-control {
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.row:after {
+  content: "";
+  /* phải có display thì mới dùng clear đc */
+  display: block;
+  clear: both;
+}
+
+.contact-form .form-submit {
+  border: none;
+  float: right;
+  color: #fff;
+  background: #000;
+  font-size: 15px;
+  padding: 12px 16px;
+  border-radius: 5px;
+}
+
+.contact-form .form-submit:hover {
+  opacity: 0.6;
 }
