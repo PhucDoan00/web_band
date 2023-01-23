@@ -14,10 +14,10 @@
     <div id="header">
       <!-- Begin Nav -->
       <ul id="nav">
-        <li><a href="">Home</a></li>
-        <li><a href="">Band</a></li>
-        <li><a href="">Tour</a></li>
-        <li><a href="">Contact</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#band">Band</a></li>
+        <li><a href="#tour">Tour</a></li>
+        <li><a href="#contact">Contact</a></li>
         <li>
           <a href="">More
             <i class="fa-sharp fa-solid fa-caret-down"></i>
@@ -50,7 +50,7 @@
 
     <!-- Begin Content -->
     <div id="content">
-      <div class="content-section">
+      <div id="band" class="content-section">
         <h2 class="section-heading">THE BAND</h2>
         <p class="section-sub-heading">We love music</p>
         <p class="about-text">
@@ -85,7 +85,7 @@
       </div>
       <!-- Begin Tour Dates -->
       <div class="tour-section">
-        <div class="content-section text-white">
+        <div id="tour" class="content-section text-white">
           <h2 class="section-heading text-white">TOUR DATES</h2>
           <p class="section-sub-heading tour-subheading">
             Remember to book your tickets!
@@ -132,35 +132,7 @@
       </div>
 
       <!-- Begin Contact -->
-
-      <!-- <div class="content-section">
-        <h2 class="section-heading">CONTACT</h2>
-        <p class="section-sub-heading">Fan? Drop a note!</p>
-        <div class="contact-info">
-          <div class="contact-address col-half">
-            <i class="fa-solid fa-location-dot"></i>
-            Chicago, US
-            <i class="fa-solid fa-phone"></i>
-            Phone: +00 151515
-            <i class="fa-solid fa-envelope"></i>
-            Email: mail@gmail.com
-          </div>
-          <div class="contact-form col-half">
-            <div class="half-one">
-              <input type="text" class="input-name" placeholder="Name">
-            </div>
-            <div class="half-two">
-              <input type="text" class="input-email" placeholder="Email">
-            </div>
-            <input type="text" class="input-message" placeholder="Message">
-            <button class="">SEND</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-      <div class="content-section">
+      <div id="contact" class="content-section">
         <h2 class="section-heading">CONTACT</h2>
         <p class="section-sub-heading">Fan? Drop a note!</p>
 
@@ -240,27 +212,42 @@
         </div>
       </div>
 
-      <script>
-        const buyBtns = document.querySelectorAll('.js-buy-ticket')
-        const modal = document.querySelector('.js-modal')
-        const modalClose = document.querySelector('.js-modal-close')
+      <img src="./assets/img/map/map.jpg" alt="map" class="map-img">
 
-        function showBuyTickets() {
-          modal.classList.add('open')
-        }
+      <div class="footer-section">
+        <i class="fa-brands fa-square-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-square-snapchat"></i>
+        <i class="fa-brands fa-pinterest"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+        <p class="footer-text">
+          Powered by <a href="">PhucDoan</a>
+        </p>
+      </div>
+    </div>
 
-        function closeBuyTickets() {
-          modal.classList.remove('open')
-        }
+    <script>
+      const buyBtns = document.querySelectorAll('.js-buy-ticket')
+      const modal = document.querySelector('.js-modal')
+      const modalClose = document.querySelector('.js-modal-close')
+
+      function showBuyTickets() {
+        modal.classList.add('open')
+      }
+
+      function closeBuyTickets() {
+        modal.classList.remove('open')
+      }
 
 
-        for (const buyBtn of buyBtns) {
-          buyBtn.addEventListener('click', showBuyTickets)
-        }
+      for (const buyBtn of buyBtns) {
+        buyBtn.addEventListener('click', showBuyTickets)
+      }
 
-        modalClose.addEventListener('click', closeBuyTickets)
+      modalClose.addEventListener('click', closeBuyTickets)
 
-      </script>
+    </script>
 </body>
 
 </html>
